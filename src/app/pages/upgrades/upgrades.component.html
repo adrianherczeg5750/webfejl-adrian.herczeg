@@ -1,0 +1,11 @@
+<div class="container">
+  <mat-grid-list  cols="4" rowHeight="2:1" gutterSize="16px">
+      <mat-grid-tile colspan="2" rowspan="2" *ngFor="let development of developments; let i = index" [attr.data-index]="i">
+        <div class="tile-content">
+          <h1>{{ development.title }}</h1>
+          <img [src]="development.img">
+          <p>{{ development.description }}</p>
+        </div>
+      </mat-grid-tile>
+  </mat-grid-list>
+</div>

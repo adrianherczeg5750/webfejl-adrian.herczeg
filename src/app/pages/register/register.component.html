@@ -1,0 +1,52 @@
+<div mat-dialog-title class="title">
+  <h1>Regisztráció</h1>
+</div>
+<form [formGroup]="registerForm" (ngSubmit)="OnSubmit()">
+  <div mat-dialog-content class="content">
+    <div class="row">
+      <div formGroupName="name">
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label color="accent">Vezetéknév</mat-label>
+          <input matInput type="text" formControlName="lastname">
+          <mat-error *ngIf="registerForm.get('name.lastname')?.hasError('required')">Vezetéknév megadása kötelező</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="outline" color="accent">
+          <mat-label color="accent">Keresztnév</mat-label>
+          <input matInput type="text" formControlName="firstname">
+          <mat-error *ngIf="registerForm.get('name.firstname')?.hasError('required')">Keresztnév megadása kötelező</mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+
+    <div class="row">
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label color="accent">Email</mat-label>
+        <input matInput type="email" formControlName="email">
+        <mat-error *ngIf="registerForm.get('email')?.hasError('required')">Email megadása kötelező</mat-error>
+        <mat-error *ngIf="registerForm.get('email')?.hasError('email')">Érvénytelen email</mat-error>
+      </mat-form-field>
+    </div>
+    <div class="row">
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label color="accent">Jelszó</mat-label>
+        <input matInput type="password" formControlName="password">
+        <mat-error *ngIf="registerForm.get('password')?.hasError('required')">Jelszó megadása kötelező</mat-error>
+        <mat-error *ngIf="registerForm.get('password')?.hasError('minlength')">A jelszónak legalább 6 karakter hosszúnak kell lennie</mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline" color="accent">
+        <mat-label color="accent">Jelszó megerősítése</mat-label>
+        <input matInput type="password" formControlName="rePassword">
+        <mat-error *ngIf="registerForm.get('rePassword')?.hasError('required')">Jelszó megerősítése kötelező</mat-error>
+        <mat-error *ngIf="registerForm.hasError('mismatch')">A jelszavak nem egyeznek</mat-error>
+      </mat-form-field>
+    </div>
+  </div>
+  <div mat-dialog-action class="action">
+    <button mat-raised-button color="accent" (click)="LoginDialog()" matDialogClose>Van fiókom</button>
+    <span class="spacer"></span>
+    <button mat-raised-button type="button" matDialogClose>Vissza</button>
+    <button mat-raised-button color="accent" type="submit">Regisztrálás</button>
+  </div>
+</form>
+
+<mat-nav-list></mat-nav-list>

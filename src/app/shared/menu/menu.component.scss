@@ -1,0 +1,84 @@
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar {
+  .menu-link {
+    margin-right: 8px;
+  }
+  z-index: 1000;
+  position: fixed;
+  width: 100%;
+}
+.hidden{
+  display: none;
+}
+@media (max-width: 1020px) {
+
+  mat-toolbar a span,
+  mat-toolbar button span {
+    display: none;
+  }
+
+  mat-toolbar a,
+  mat-toolbar button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    padding: 0 8px;
+  }
+
+  mat-toolbar a mat-icon,
+  mat-toolbar button mat-icon {
+    font-size: 20px;
+    margin: 20px ;
+  }
+
+  mat-toolbar .mat-raised-button {
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .login button {
+    padding: 0 8px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+  }
+}
+
+@media (max-width: 665px) {
+  mat-toolbar {
+    padding: 0 14px;
+  }
+
+  mat-toolbar a,
+  mat-toolbar button {
+    min-width: 0;
+    padding: 0 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  mat-toolbar a mat-icon,
+  mat-toolbar button mat-icon {
+    font-size: 20px;
+  }
+
+  mat-toolbar .mat-raised-button {
+    padding: 0 14px;
+    font-size: 14px;
+  }
+
+  .login button {
+    padding: 0 14px;
+  }
+
+  .spacer {
+    flex: 1 1 auto;
+    margin-bottom: 400px;
+  }
+}

@@ -1,0 +1,13 @@
+
+<div class="select-container">
+    <mat-select class="select-box" [(value)]="chosenImage" (selectionChange)="reload()" panelClass="accent-option">
+        <mat-option class="selected"color="accent" *ngFor="let obj of galleryObjectInput" [value]="obj">
+            {{ obj.key }}
+        </mat-option>
+    </mat-select>
+
+</div>
+
+
+
+

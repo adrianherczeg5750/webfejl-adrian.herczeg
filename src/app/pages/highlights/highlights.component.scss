@@ -1,0 +1,36 @@
+.mat-toolbar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 1000;
+
+    @media (max-width: 768px) {
+      position: relative;
+      bottom: auto;
+    }
+  }
+
+  body, html {
+    height: 100%;
+    margin: 0;
+    padding: 0px;
+    overflow: hidden;
+  }
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100%;
+  }
+  .egesz {
+    margin-top: 20px;
+    @media (max-width: 900px) {
+      position: relative;
+      bottom: auto;
+      margin-top: 250px;
+    }
+  }

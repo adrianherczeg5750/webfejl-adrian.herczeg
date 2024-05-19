@@ -1,0 +1,9 @@
+
+  <mat-grid-list cols="4" rowHeight="2:1" gutterSize="24px">
+    <mat-grid-tile colspan="2" rowspan="2" *ngFor="let track of tracks; let i = index" [attr.data-index]="i">
+      <div class="tile-content">
+        <h3>{{ track.name }}</h3>
+        <p>{{ track.facts }}</p>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>

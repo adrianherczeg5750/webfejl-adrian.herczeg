@@ -1,0 +1,14 @@
+
+<mat-toolbar class="mat-elevation-z8">
+    <a class="startlap" data-value="main" (click)="menuSwitch('main')">Kezdőlap</a>
+    <div class="spacer"></div>
+    <a class="menu-link" mat-raised-button color="accent" data-value="highlights" (click)="menuSwitch('highlights')"><mat-icon>star</mat-icon><span>Hírek</span></a>
+    <a class="menu-link" mat-raised-button color="accent" data-value="grandprix" (click)="menuSwitch('grandprix')"><mat-icon>flight_takeoff</mat-icon><span>Helyszinek</span></a>
+    <a class="menu-link" mat-raised-button color="accent" data-value="standings" (click)="menuSwitch('standings')"><mat-icon>leaderboard</mat-icon><span>Tabella</span></a>
+    <a class="menu-link" mat-raised-button color="accent" data-value="teams" (click)="menuSwitch('teams')"><mat-icon>groups</mat-icon><span>Csapatok</span></a>
+    <a class="menu-link" mat-raised-button color="accent" data-value="upgrades" (click)="menuSwitch('upgrades')"><mat-icon>precision_manufacturing</mat-icon><span>Fejlesztések</span></a>
+    <div class="login">
+        <button *ngIf="!(loggedIn)" mat-raised-button color="accent" (click)="LoginDialog()"><mat-icon>login</mat-icon><span>Bejelentkezés</span></button>
+        <button *ngIf="loggedIn" mat-raised-button color="accent" (click)="Logout()"><mat-icon>login</mat-icon><span>Kijelentkezés</span></button>
+    </div>
+</mat-toolbar>

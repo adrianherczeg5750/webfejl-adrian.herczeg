@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "webfejl-forma1-adrian": {
+      "hosting": {
+        "forma1": [
+          "webfejl-forma1-adrian"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "webfejl-forma1-adrian"
+  }
+}

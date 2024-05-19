@@ -1,0 +1,9 @@
+{
+  "hosting": [
+    {
+      "target": "forma1",
+      "public": "dist/forma1",
+      "frameworksBackend": {}
+    }
+  ]
+}

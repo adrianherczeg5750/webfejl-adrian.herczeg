@@ -1,0 +1,38 @@
+
+<div class="table">
+  <div class="mat-table">
+    <div class="spacer">
+      <h1>""</h1><h1>""</h1>
+    </div>
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+
+      <ng-container matColumnDef="position">
+        <th mat-header-cell *matHeaderCellDef> Helyezés </th>
+        <td mat-cell *matCellDef="let pilot"> {{pilot.position}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef> Pilóta neve </th>
+        <td mat-cell *matCellDef="let pilot"> {{pilot.name}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="team">
+        <th mat-header-cell *matHeaderCellDef> Csapat </th>
+        <td mat-cell *matCellDef="let pilot"> {{pilot.team}} </td>
+      </ng-container>
+
+
+      <ng-container matColumnDef="points">
+        <th mat-header-cell *matHeaderCellDef> Pontok </th>
+        <td mat-cell *matCellDef="let pilot"> {{pilot.points}} </td>
+      </ng-container>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+  </div>
+</div>
+

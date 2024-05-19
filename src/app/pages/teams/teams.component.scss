@@ -1,0 +1,16 @@
+@media screen and (min-width: 1000px){
+    .table {
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+  }
+
+
+  .mat-table {
+    width: calc(100% - 600px);
+    margin: 0 auto;
+
+    justify-content: center;
+    padding-bottom: 50px;
+  }
+}

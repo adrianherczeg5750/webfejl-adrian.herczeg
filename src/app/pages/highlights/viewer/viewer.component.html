@@ -1,0 +1,30 @@
+<div class="container" *ngIf="imageInput">
+    <img class="galleryImage" [src]="'assets/' + imageInput.id + '.jpg'" />
+    <div class="break"></div>
+    <div> <h2>{{imageInput.user_name}}</h2></div>
+    <div class="break"></div>
+    <div class="leiras">{{imageInput.user_url}}</div>
+    <div class="break"></div>
+    <div>{{imageInput.photo_url}}</div>
+</div>  
+<div class="comment">
+    <h2>Kommentek</h2>
+    <ul>
+        <li *ngFor="let comment of comments">
+            <strong>{{ comment.username }}:</strong> {{ comment.text }}
+            <button mat-flat-button color="warn" (click)="deleteComment(comment.id)">Delete</button>
+        </li>
+    </ul>
+  
+    <h3>Hozzászólás</h3>
+    <form (ngSubmit)="addComment()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Leave a comment</mat-label>
+            <textarea matInput [(ngModel)]="newComment.text" placeholder="Ex. It makes me feel..." name="commentText" (keydown.enter)="addComment()"></textarea>
+        </mat-form-field>
+        <div></div>
+        <button type="submit" mat-raised-button color="primary">Hozzászól</button>
+    </form>
+</div>
+
+      
